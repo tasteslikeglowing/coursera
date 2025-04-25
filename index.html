@@ -3,32 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>___</title> <!-- Page title placeholder -->
+    <title>My First Console App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Testing GitHub Page</h1> <!-- Your name and tagline -->
+    <header role="banner">
+        <h1 tabindex="0">Welcome to My First Console App</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">First Thing</a></li> <!-- First link -->
-            <li><a href="#">Second Thing</a></li> <!-- Second link -->
-            <li><a href="#">___</a></li> <!-- Third link -->
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>___</h2> <!-- Section heading -->
-            <p>___</p> <!-- Paragraph introducing yourself -->
+    <main role="main">
+        <section role="region" aria-labelledby="about-me-heading">
+            <h2 id="about-me-heading" tabindex="0">About Me</h2>
+            <p>My name is Matt and I am attempting to get my certificate.</p>
+            <ul>
+                <li tabindex="0">HTML</li>
+                <li tabindex="0">CSS</li>
+                <li tabindex="0">JavaScript</li>
+                <li tabindex="0">React</li>
+                <li tabindex="0">Node.js</li>
+                <li tabindex="0">Git</li>
+                <li tabindex="0">Problem Solving</li>
+                <li tabindex="0">Team Collaboration</li>
+            </ul>
         </section>
-        <aside>
-            <h3>___</h3> <!-- Sidebar heading -->
-            <p>___</p> <!-- Skills list or short summary -->
-        </aside>
+        <section role="region" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" tabindex="0">Skills</h2>
+            <ul class="skills-list">
+                <li tabindex="0">Responsive Web Design</li>
+                <li tabindex="0">Cross-Browser Compatibility</li>
+                <li tabindex="0">Debugging and Testing</li>
+                <li tabindex="0">API Integration</li>
+                <li tabindex="0">Version Control with Git</li>
+                <li tabindex="0">Agile Development Practices</li>
+            </ul>
+        </section>
+        <section role="region" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" tabindex="0">Projects</h2>
+            <article role="article">
+                <figure>
+                    <img src="project1-placeholder.jpg" alt="Project 1 Screenshot" tabindex="0">
+                    <figcaption tabindex="0">Project 1: Placeholder Description</figcaption>
+                </figure>
+                <p>This is a brief description of Project 1.</p>
+            </article>
+            <article role="article">
+                <figure>
+                    <img src="project2-placeholder.jpg" alt="Project 2 Screenshot" tabindex="0">
+                    <figcaption tabindex="0">Project 2: Placeholder Description</figcaption>
+                </figure>
+                <p>This is a brief description of Project 2.</p>
+            </article>
+        </section>
+        <article role="article">
+            <p>This app is designed to demonstrate basic HTML structure and semantic elements.</p>
+        </article>
+        <section role="region" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" tabindex="0">Contact</h2>
+            <form action="/submit" method="post" role="form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </main>
-    <footer>
-        <p>&copy; ___</p> <!-- Copyright text -->
+    <footer role="contentinfo">
+        <p tabindex="0">&copy; 2023 My First Console App</p>
     </footer>
+
 </body>
+<script src="script.js"></script>
 </html>

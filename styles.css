@@ -1,0 +1,162 @@
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#about-me {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+#about-me p {
+    margin: 1rem 0;
+}
+
+#about-me ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+#projects article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 1rem;
+    text-align: center;
+}
+
+#projects img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+#projects figcaption {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+#projects p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.skills-list li::before {
+    content: '✔'; /* Unicode checkmark */
+    color: green;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects article {
+        max-width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #about-me, #skills-heading, #projects-heading, #contact-heading {
+        font-size: 1rem;
+    }
+
+    #projects article {
+        padding: 0.5rem;
+    }
+
+    nav.mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #444;
+        padding: 1rem 0;
+    }
+
+    nav.mobile-menu a {
+        margin: 0.5rem 0;
+    }
+
+    nav .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+        }
+    
+        nav.mobile-menu {
+            display: flex;
+        }
+    
+        nav .hamburger {
+            display: block;
+        }
+    }
+}
